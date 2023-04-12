@@ -46,7 +46,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		margin: 0 1.5em;
-		height: 35rem;
+		height: 30rem;
 		width: 100%;
 		max-width: 33rem;
 		background-color: $white;
@@ -70,7 +70,7 @@ body {
 	}
 
 	&__item {
-		margin: 0.5em 0;
+		margin: 0.2em;
 		padding: 0.5em 1em;
 		font-size: 2rem;
 		text-decoration: none;
@@ -214,6 +214,11 @@ body {
 				right: -1rem;
 				border-radius: 1em;
 				z-index: -1;
+				transition: top 0.3s;
+			}
+
+			&:hover::after {
+				top: 0;
 			}
 
 			&--transform::after {
@@ -275,6 +280,131 @@ body {
 	}
 }
 
+.clients {
+	padding: 4em 1.5em;
+	&__title {
+		margin-bottom: 4em;
+		font-family: 'Fraunces', serif;
+		font-size: 1.6rem;
+		color: $grayish-blue;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4em;
+	}
+
+	&__box {
+		max-width: 450px;
+		text-align: center;
+
+		&:last-child {
+			margin-bottom: 1.5em;
+		}
+
+		&-img {
+			height: 7.2rem;
+			border-radius: 50%;
+		}
+
+		&-text {
+			margin: 1.8em 0;
+			font-family: 'Barlow', sans-serif;
+			font-size: 1.8rem;
+			line-height: 3.2rem;
+			color: $very-dark-grayish-blue;
+		}
+
+		&-name {
+			margin-bottom: 0.5em;
+			font-family: 'Fraunces', serif;
+			font-size: 1.8rem;
+			font-weight: 900;
+			color: $very-dark-desaturated-blue;
+		}
+
+		&-position {
+			font-family: 'Barlow', sans-serif;
+			font-size: 1.4rem;
+			color: $grayish-blue;
+		}
+	}
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__img {
+		width: 50%;
+	}
+}
+
+.footer {
+	padding: 4em 0 5em;
+	text-align: center;
+	background-color: $footer-bg;
+	overflow: hidden;
+
+	&__logo {
+		min-width: 170px;
+		margin-bottom: 2.5em;
+	}
+
+	&__links {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__link {
+		margin: 0em 1.6em;
+		padding: 0 0 0.2em;
+		font-family: 'Barlow', sans-serif;
+		font-size: 1.8rem;
+		color: $dark-moderate-cyan;
+		text-decoration: none;
+		border-bottom: 2px dashed transparent;
+		transition: color 0.3s, border 0.3s;
+
+		&:hover {
+			color: $white;
+			border-bottom: 2px dashed $white;
+		}
+
+		&:focus {
+			outline: none;
+			border-bottom: 2px dashed $white;
+			color: $white;
+		}
+	}
+
+	&__socials {
+		margin-top: 5.5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.6em;
+		color: $dark-moderate-cyan;
+
+		svg {
+			cursor: pointer;
+			&:hover {
+				color: $white;
+			}
+
+			&:focus {
+				outline: none;
+				color: $white;
+			}
+		}
+	}
+}
+
 @media (min-width: 576px) {
 	.header {
 		background-position: 50% 70%;
@@ -292,6 +422,7 @@ body {
 		}
 	}
 }
+
 @media (min-width: 768px) {
 	.nav {
 		padding: 2.1em 2.5em;
@@ -409,6 +540,28 @@ body {
 			display: flex;
 		}
 	}
+
+	.gallery {
+		&__img {
+			width: 25%;
+
+			&--milk {
+				content: url('../img/desktop/image-gallery-milkbottles.jpg');
+			}
+
+			&--orange {
+				content: url('../img/desktop/image-gallery-orange.jpg');
+			}
+
+			&--cone {
+				content: url('../img/desktop/image-gallery-cone.jpg');
+			}
+
+			&--sugar {
+				content: url('../img/desktop/image-gallery-sugarcubes.jpg');
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -460,11 +613,39 @@ body {
 			}
 		}
 	}
+
+	.clients {
+		padding: 8em 2.5em;
+
+		&__title {
+			font-size: 2rem;
+		}
+
+		&__boxes {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: center;
+			gap: 1.9em;
+		}
+
+		&__box {
+			max-width: 350px;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	.footer {
+		padding: 4.5em;
+	}
 }
 
 @media (min-width: 1440px) {
 	.header {
-		min-height: 80rem;
+		height: 100vh;
+		max-height: 80rem;
 	}
 
 	.offers {
@@ -494,6 +675,16 @@ body {
 				.offers__box-info {
 					padding: 0;
 				}
+			}
+		}
+	}
+
+	.clients {
+		padding: 10em 2.5em;
+
+		&__box {
+			&-text {
+				margin: 3.2em 0 3.8em;
 			}
 		}
 	}
