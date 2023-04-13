@@ -23,8 +23,20 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![](./screens/desktop-view1.png)
+![](./screens/desktop-view2.png)
+![](./screens/desktop-view3.png)
+![](./screens/desktop-view4.png)
+![](./screens/desktop-view5.png)
+![](./screens/desktop-view6.png)
+![](./screens/mobile-view1.png)
+![](./screens/mobile-view2.png)
+![](./screens/mobile-view3.png)
+![](./screens/mobile-view4.png)
+![](./screens/mobile-view5.png)
+![](./screens/mobile-view6.png)
+![](./screens/mobile-view7.png)
+![](./screens/mobile-view8.png)
 
 ### Links
 

@@ -14,12 +14,9 @@ html {
 
 body {
 	min-height: 100vh;
-	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-family: 'Barlow', sans-serif;
 	font-size: 1.6rem;
 }
-
-// font-family: 'Barlow', sans-serif;
-// font-family: 'Fraunces', serif;
 
 .wrapper {
 	position: relative;
@@ -28,8 +25,13 @@ body {
 	width: 100%;
 }
 
-.nav {
+.fixed-nav {
 	position: fixed;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav {
+	position: absolute;
 	top: 0;
 	left: 0;
 	padding: 0.6em 0 0.5em 1.5em;
@@ -48,7 +50,7 @@ body {
 		margin: 0 1.5em;
 		height: 30rem;
 		width: 100%;
-		max-width: 33rem;
+		max-width: 17rem;
 		background-color: $white;
 		transform: translate(120%, -120%);
 		transition: transform 0.5s;
@@ -72,7 +74,7 @@ body {
 	&__item {
 		margin: 0.2em;
 		padding: 0.5em 1em;
-		font-size: 2rem;
+		font-size: 1.6rem;
 		text-decoration: none;
 		border: 2px solid transparent;
 		font-weight: 600;
@@ -85,7 +87,7 @@ body {
 
 		&:focus {
 			outline: none;
-			border: 2px dashed royalblue;
+			border: 2px dashed #4169e1;
 		}
 
 		&:last-child {
@@ -93,7 +95,7 @@ body {
 			padding: 1.1em 2em;
 			font-family: 'Fraunces', serif;
 			color: $very-dark-desaturated-blue;
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			text-transform: uppercase;
 			background-color: $yellow;
 			border-radius: 2em;
@@ -139,9 +141,9 @@ body {
 		margin-bottom: 1.3em;
 		font-family: 'Fraunces', serif;
 		font-weight: 900;
-		font-size: 4rem;
+		font-size: 3rem;
 		text-transform: uppercase;
-		letter-spacing: 6px;
+		letter-spacing: 3px;
 		color: $white;
 	}
 
@@ -186,7 +188,6 @@ body {
 
 		&-text {
 			padding: 1.3em 0 1.8em;
-			font-family: 'Barlow', sans-serif;
 			font-size: 1.8rem;
 			line-height: 3rem;
 			color: $dark-grayish-blue;
@@ -242,7 +243,7 @@ body {
 
 			.offers__box-info {
 				margin: 3em 0;
-				padding: 0;
+				padding: 0 0.5em;
 				width: 100%;
 				max-width: 34rem;
 				text-align: center;
@@ -314,7 +315,6 @@ body {
 
 		&-text {
 			margin: 1.8em 0;
-			font-family: 'Barlow', sans-serif;
 			font-size: 1.8rem;
 			line-height: 3.2rem;
 			color: $very-dark-grayish-blue;
@@ -329,7 +329,6 @@ body {
 		}
 
 		&-position {
-			font-family: 'Barlow', sans-serif;
 			font-size: 1.4rem;
 			color: $grayish-blue;
 		}
@@ -364,7 +363,6 @@ body {
 	&__link {
 		margin: 0em 1.6em;
 		padding: 0 0 0.2em;
-		font-family: 'Barlow', sans-serif;
 		font-size: 1.8rem;
 		color: $dark-moderate-cyan;
 		text-decoration: none;
@@ -405,6 +403,44 @@ body {
 	}
 }
 
+@media (min-width: 375px) {
+	.nav {
+		&__items {
+			max-width: 32.5rem;
+		}
+
+		&__item {
+			font-size: 2rem;
+
+			&:last-child {
+				font-size: 1.5rem;
+			}
+		}
+
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__btn {
+			padding: 1.5em;
+			cursor: pointer;
+			transition: opacity 0.3s;
+
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.header {
+		&__heading {
+			font-size: 4rem;
+			letter-spacing: 6px;
+		}
+	}
+}
 @media (min-width: 576px) {
 	.header {
 		background-position: 50% 70%;
