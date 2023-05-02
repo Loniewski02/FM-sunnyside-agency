@@ -1,5 +1,6 @@
-const burgerBtn = document.querySelector('.nav__btn');
+const burgerBtn = document.querySelector('.nav__burger-btn');
 const navItems = document.querySelector('.nav__items');
+const allNavItems = navItems.querySelectorAll('.nav__item');
 const nav = document.querySelector('.nav');
 
 const addShadow = () => {
@@ -31,4 +32,12 @@ window.addEventListener('scroll', addShadow);
 
 burgerBtn.addEventListener('click', () => {
 	navItems.classList.toggle('nav__items--active');
+	burgerBtn.classList.toggle('nav__burger-btn--active');
+
+	allNavItems.forEach(item =>
+		item.addEventListener('click', () => {
+			navItems.classList.remove('nav__items--active');
+			burgerBtn.classList.remove('nav__burger-btn--active');
+		})
+	);
 });
