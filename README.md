@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://github.com/Loniewski02/FM-sunnyside-agency)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/html-sass-js-sunnyside-agency-W8d9OE2k_m)
 - Live Site URL: [Live](https://loniewski02.github.io/FM-sunnyside-agency/)
 
 ## My process
